@@ -270,6 +270,7 @@ func (self *CiosMessaging) Start(ctx ciosctx.RequestCtx) (err error) {
 }
 func (self *CiosMessaging) Close() (err error) {
 	self.debug("Close")
+	fmt.Println("send close messaging")
 	defer self.CloseFunc()
 	self.closed <- true
 	self.closed <- true
