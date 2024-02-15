@@ -275,7 +275,7 @@ func (self *CiosMessaging) Close() (err error) {
 	self.closed <- true
 	safeCloseChan(self.closed)
 	if !check.IsNil(self.Connection) {
-		self.debug("send websocket close message")
+		fmt.Println("send websocket close message")
 		return self.Connection.WriteMessage(websocket.CloseMessage, websocket.FormatCloseMessage(websocket.CloseNormalClosure, ""))
 	}
 	return nil
