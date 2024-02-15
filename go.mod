@@ -1,4 +1,4 @@
-module github.com/optim-corp/cios-golang-sdk
+module github.com/SotaTatsumi/cios-golang-sdk
 
 go 1.15
 
